@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    android:orientation="vertical">
+
+    <include layout="@layout/userconter_head" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <cn.bingoogolapple.refreshlayout.BGARefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/bga_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lv_hot"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:scrollbars="none"></ListView>
+        </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+        <include
+            android:id="@+id/layout_noData"
+            layout="@layout/state_layout"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <!--<com.huosuapp.view.LoadMoreListView-->
+    <!--android:id="@+id/lv_hot"-->
+    <!--android:scrollbars="none"-->
+    <!--android:background="@android:color/white"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--&gt;</com.huosuapp.view.LoadMoreListView>-->
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:background="@color/white1"
+    android:padding="8dip"
+    >
+    <RelativeLayout 
+        android:id="@+id/rl_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    <ImageView 
+        android:id="@+id/iv_nav"
+        android:layout_width="28dip"
+        android:layout_height="28dip"
+         android:background="@drawable/return_new_1"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView 
+        android:id="@+id/tv_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="王者荣耀"
+        android:textSize="20sp"
+        android:textColor="#6c6c6c"
+        android:layout_toRightOf="@id/iv_nav"
+        android:layout_centerVertical="true"
+        />
+    </RelativeLayout>
+</RelativeLayout>

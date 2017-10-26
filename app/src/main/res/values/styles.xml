@@ -1,0 +1,93 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+    </style>
+
+    <!-- Application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">-->
+        <!--&lt;!&ndash; All customizations that are NOT specific to a particular API-level can go here. &ndash;&gt;-->
+    <!--</style>-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
+       <!-- 下面的内容要在5.0上才好用!-->
+        <item name="android:windowAllowEnterTransitionOverlap" tools:targetApi="lollipop">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap" tools:targetApi="lollipop">true</item>
+        <!-- 允许使用transitions -->
+        <item name="colorPrimaryDark">@color/statusColor</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <color name="statusColor">#000000</color>
+
+
+    <style name="customDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+
+    <style name="Transparent" >
+        <item name="android:windowBackground">@color/white</item>　　
+    </style>
+
+
+
+    <!--  这个是加入的代码 -->
+    <style name="mypopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popshow_anim</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/pophidden_anim</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <!--金额选择布局抽取-->
+    <style name="money_a">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+       <item name="android:background">@drawable/text</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+
+    <!-- 小标题字体style -->
+    <style name="SmallTitleString">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- 大标题字体style -->
+    <style name="BigTitleString">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="dialog_bg_style" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="line_color">
+        <item name="android:background">@color/line_gray</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.8dp</item>
+    </style>
+
+
+    <style name="home_index">
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+</resources>

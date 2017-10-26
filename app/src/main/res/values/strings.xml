@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<string name="app_name">7566game</string>-->
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="iv_open">iv_open</string>
+    <string name="view_tag">view_tag</string>
+
+    <!-- 性别选择文字 -->
+    <string name="sex">性别选择</string>
+    <string name="sex_string">性别:</string>
+    <string name="nan">男</string>
+    <string name="nv">女</string>
+    <string name="expand">展开</string>
+    <string name="shrink">收缩</string>
+    <string name="tips">这是一个可以伸缩展开并且带平缓过渡动画的自定义文本控件，你可以设置其展开的行数，伸缩收起的图标，伸缩收起的文本和颜色等\n</string>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+    <string name="header_hint_refresh_normal">下拉刷新</string>
+    <string name="header_hint_refresh_ready">释放刷新</string>
+    <string name="header_hint_refresh_loading">刷新中&#8230;</string>
+    <string name="header_hint_refresh_time">时间：</string>
+    <string name="footer_hint_load_normal">加载更多</string>
+    <string name="footer_hint_load_ready">释放加载更多</string>
+    <string name="register_protocol">注册即表示同意《%s平台用户协议》</string>
+    <string name="share_img">share_img</string>
+
+</resources>

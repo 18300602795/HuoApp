@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+    <include 
+        layout="@layout/userconter_head"
+        />
+    
+  	<com.huosuapp.view.PagerTab
+        android:id="@+id/download_pagertab"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+  	<!-- 第二块viewpager -->
+    <android.support.v4.view.ViewPager
+        android:layout_marginTop="5dp"
+        android:id="@+id/download_viewpagr"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/vpBase" />
+
+
+</LinearLayout>

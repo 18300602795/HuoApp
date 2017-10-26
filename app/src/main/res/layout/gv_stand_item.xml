@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingTop="10dp" >
+
+    <ImageView
+        android:id="@+id/iv_game_con"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_game_name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="小兵传奇"
+        android:textColor="#464646"
+        android:textSize="16sp" />
+<!--
+
+    <TextView
+        android:id="@+id/tv_game_desc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="动作枪战"
+        android:textColor="#818181"
+        android:textSize="12dp" />
+-->
+
+    <com.huosuapp.view.DownStateButton
+        android:id="@+id/btn_download"
+        android:layout_width="66dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/btn_down"
+        android:paddingBottom="8dip"
+        android:paddingLeft="14dip"
+        android:paddingRight="14dip"
+        android:paddingTop="8dip"
+        android:text="下载"
+        android:textColor="@color/download_text"
+        android:textSize="9dp" />
+
+</LinearLayout>

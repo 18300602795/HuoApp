@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_gw\app\libs\volley-1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4d115d052855df651f32ce983600b37135f8b808">
+        <dex dex="E:\Android\project\studio\HuoApp_gw\app\build\intermediates\pre-dexed\82_shouyouchun\release\volley-1.2_c220b5f93b0c0e1dc4d6eda97407f0a4237d9b77.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_gw\app\libs\xUtils-2.6.14.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f10c51f3e0732fdeefe6e104279a58e275879b6c">
+        <dex dex="E:\Android\project\studio\HuoApp_gw\app\build\intermediates\pre-dexed\82_shouyouchun\release\xUtils-2.6.14_bea019be6e4c4d7470552e642a101810eda561fd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_mengwendi\app\libs\alipaySdk-20160809.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a203abd5c7fbce0e5b23bf64c266025c1ba27d18">
+        <dex dex="E:\Android\project\studio\HuoApp_mengwendi\app\build\intermediates\pre-dexed\82_shouyouchun\release\alipaySdk-20160809_73a0aa4994d2a8c5edf8a852e2a08e342ab6aaa3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_mengwendi\app\libs\gson-2.2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="973e832af433b44c3ed11c426f2f390b29f3f3f8">
+        <dex dex="E:\Android\project\studio\HuoApp_mengwendi\app\build\intermediates\pre-dexed\82_shouyouchun\release\gson-2.2.4_e72e5520c3873ac7e2db92e8e531a31a3ad0139d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_gw\app\libs\afinal_0.5.1_bin.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ae398c74701392473b9cb488c76a92576d6f548c">
+        <dex dex="E:\Android\project\studio\HuoApp_gw\app\build\intermediates\pre-dexed\82_shouyouchun\release\afinal_0.5.1_bin_a242390b557b3f10c0e3a6fc2b7f181294127709.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_gw\app\libs\commons-lang.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ef6449b62937bbd10e29ba9ed9a852754b861d26">
+        <dex dex="E:\Android\project\studio\HuoApp_gw\app\build\intermediates\pre-dexed\82_shouyouchun\release\commons-lang_ecafd79724c2b076f976c9b347f30d7ed88cd70b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_mengwendi\app\libs\xUtils-2.6.14.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f10c51f3e0732fdeefe6e104279a58e275879b6c">
+        <dex dex="E:\Android\project\studio\HuoApp_mengwendi\app\build\intermediates\pre-dexed\82_shouyouchun\release\xUtils-2.6.14_c5680224d526dd7e700aaf26ea164e71f8961b52.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_gw\app\libs\alipaySdk-20160809.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a203abd5c7fbce0e5b23bf64c266025c1ba27d18">
+        <dex dex="E:\Android\project\studio\HuoApp_gw\app\build\intermediates\pre-dexed\82_shouyouchun\release\alipaySdk-20160809_e705a844330d9fe8d689c06c9d0df27acaefd381.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_mengwendi\app\libs\volley-1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4d115d052855df651f32ce983600b37135f8b808">
+        <dex dex="E:\Android\project\studio\HuoApp_mengwendi\app\build\intermediates\pre-dexed\82_shouyouchun\release\volley-1.2_a7c547b56e562f70622981bb4fd79883f5ddbdb8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_mengwendi\app\libs\afinal_0.5.1_bin.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ae398c74701392473b9cb488c76a92576d6f548c">
+        <dex dex="E:\Android\project\studio\HuoApp_mengwendi\app\build\intermediates\pre-dexed\82_shouyouchun\release\afinal_0.5.1_bin_bbd575c7dba9581832b1fbe02b317ac1ced48e24.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_gw\app\libs\universal-image-loader-1.9.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
+        <dex dex="E:\Android\project\studio\HuoApp_gw\app\build\intermediates\pre-dexed\82_shouyouchun\release\universal-image-loader-1.9.3_1811eea0dcbe416a1e7340e6cdc14df119ac516c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_gw\app\libs\org.apache.http.legacy.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="017030d11901291abf8f83a812984276b643ea0f">
+        <dex dex="E:\Android\project\studio\HuoApp_gw\app\build\intermediates\pre-dexed\82_shouyouchun\release\org.apache.http.legacy_d28d6130a5ee7ce8aa8453b1be6d6d0d0299fe2e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_mengwendi\app\libs\universal-image-loader-1.9.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
+        <dex dex="E:\Android\project\studio\HuoApp_mengwendi\app\build\intermediates\pre-dexed\82_shouyouchun\release\universal-image-loader-1.9.3_2a6d643d2e7fa2277ae20d6552608d5f1692f5b5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_mengwendi\app\libs\wftsdk2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bec068e362b01ebbf331894d5597712f1c3a333e">
+        <dex dex="E:\Android\project\studio\HuoApp_mengwendi\app\build\intermediates\pre-dexed\82_shouyouchun\release\wftsdk2.0_243c0f08bcad2bd6370dd5fa5e78d17eda3ba8d0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_mengwendi\app\libs\org.apache.http.legacy.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="017030d11901291abf8f83a812984276b643ea0f">
+        <dex dex="E:\Android\project\studio\HuoApp_mengwendi\app\build\intermediates\pre-dexed\82_shouyouchun\release\org.apache.http.legacy_811a4e6480d5ad0b1c1608be294ae630cb89fd1b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_gw\app\libs\wftsdk2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bec068e362b01ebbf331894d5597712f1c3a333e">
+        <dex dex="E:\Android\project\studio\HuoApp_gw\app\build\intermediates\pre-dexed\82_shouyouchun\release\wftsdk2.0_2f68fd1965a52099430de1aa37d3dcfda1e8b5cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_gw\app\libs\gson-2.2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="973e832af433b44c3ed11c426f2f390b29f3f3f8">
+        <dex dex="E:\Android\project\studio\HuoApp_gw\app\build\intermediates\pre-dexed\82_shouyouchun\release\gson-2.2.4_504a1321c8c34e2ec687d60b69177326e31952e3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\project\studio\HuoApp_mengwendi\app\libs\commons-lang.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ef6449b62937bbd10e29ba9ed9a852754b861d26">
+        <dex dex="E:\Android\project\studio\HuoApp_mengwendi\app\build\intermediates\pre-dexed\82_shouyouchun\release\commons-lang_c94a6370174eaf7efde151f2ad2e747cc6d88a38.jar" />
+    </item>
+
+</items>

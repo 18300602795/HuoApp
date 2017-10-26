@@ -1,0 +1,182 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="55dip"
+        android:gravity="center"
+        android:padding="3dip" >
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/return_new_1"
+            android:scaleType="center" />
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dip"
+                android:layout_toLeftOf="@+id/iv_setting"
+                android:layout_toRightOf="@id/iv_logo">
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:background="@drawable/read_kuang"
+                    android:hint="搜索好玩游戏"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="50dip"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:textColor="#505050"
+                    android:textColorHint="#818181" />
+
+
+         <!--   <android.support.v7.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="@drawable/read_kuang"
+                android:imeOptions="actionSearch"
+                app:defaultQueryHint="请输入关键字..."/>-->
+
+
+                <ImageView 
+                    android:id="@+id/iv_search"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"      
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/dangdajing1" />
+
+            </RelativeLayout>
+    </RelativeLayout>
+
+
+
+    <!-- 搜索结果展示 默认隐藏-->
+    <LinearLayout
+        android:id="@+id/searchResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="搜索结果"
+            android:textColor="@android:color/black" />
+
+        <ListView
+            android:id="@+id/lv_searchResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"/>
+
+    </LinearLayout>
+
+
+
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        
+        >
+
+
+<!--   <LinearLayout
+       android:id="@+id/llt_1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       ></LinearLayout>-->
+
+       <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="推荐搜索"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        />
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/green"
+            />
+
+        <GridView
+            android:id="@+id/ruijian_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="2">
+
+        </GridView>
+    
+   
+   <TextView 
+       android:layout_marginTop="15dp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="搜索热词"
+       android:visibility="gone"
+       android:textSize="16sp"
+       android:layout_marginLeft="10dp"
+       />
+   <View 
+       android:layout_marginTop="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="0.5dp"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:background="@color/green"
+       android:visibility="gone"
+       />
+   
+   
+     <!--
+   <LinearLayout 
+       android:id="@+id/llt_2"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1"
+       android:orientation="horizontal"
+       >    
+       <include layout="@layout/search_hot_word"/>  -->
+        <GridView
+            android:id="@+id/houtWord_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:listSelector="@android:color/transparent"
+            android:visibility="gone"
+            android:numColumns="2"/>
+   </LinearLayout>
+
+   </LinearLayout>

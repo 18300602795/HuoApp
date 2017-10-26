@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.huosuapp.widget.XListView
+        android:id="@+id/table_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+       />
+    <include layout="@layout/state_layout"
+        android:id="@+id/layout_noData"
+        android:visibility="gone"
+        />
+</RelativeLayout>

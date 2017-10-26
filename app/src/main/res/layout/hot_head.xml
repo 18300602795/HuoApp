@@ -1,0 +1,146 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/white"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_started_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_dots"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal" />
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/home_table"
+            style="@style/home_index"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:background="#b367d1">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn_index_1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="开服表"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/home_bt"
+            style="@style/home_index"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:background="#d64a56">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn_index_3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="变态版"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_break"
+            style="@style/home_index"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:background="#43b5d4">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn_index_4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="破解版"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_gift"
+            style="@style/home_index"
+            android:layout_height="wrap_content"
+            android:background="#eca146">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn_index_5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="礼包"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:background="#5bbf7c"
+            android:text="首发"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:text="今日独家首发"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

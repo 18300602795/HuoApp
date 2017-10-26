@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="180dp"
+              android:background="@color/vpBase"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:paddingTop="15dip"
+    >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="请先登录！"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="8dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="8dip"
+        android:background="@drawable/ttw_gamegift_dialog_line"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dip"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:gravity="center_horizontal"
+        >
+        <!--android:background="@drawable/ttw_giftgame_dialog_bottom_bg"-->
+        <TextView
+            android:id="@+id/tv_dialog_close"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ttw_gamegaft_dialog_close"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="关闭"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_dialog_login"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ttw_gamegaft_dialog_close"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="登录"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

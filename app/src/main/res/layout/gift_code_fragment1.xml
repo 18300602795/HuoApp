@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/vpBase"
+              android:orientation="vertical">
+
+  <!--  <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dip"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/iv_setting"
+        android:layout_toRightOf="@id/iv_logo"
+        android:background="@android:color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="23dp"
+            android:background="@null"
+            android:hint="输入游戏名称"
+            android:paddingLeft="3dip"
+            android:paddingRight="50dip"
+            android:singleLine="true"
+            android:textColor="#505050"
+            android:textColorHint="#818181"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/dangdajing1"/>
+
+
+        <TextView
+            android:id="@+id/tv_search_gift"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/blue3"
+            android:gravity="center"
+            android:text="搜礼包"
+            android:textColor="@android:color/white"
+            />
+
+    </RelativeLayout>
+-->
+    <com.huosuapp.view.LoadMoreListView
+        android:id="@+id/lv_gift_code"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="5dip"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dip"
+        android:scrollbars="none"/>
+
+</LinearLayout>

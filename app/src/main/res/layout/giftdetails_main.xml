@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/vpBase"
+              android:orientation="vertical">
+    <include layout="@layout/userconter_head"/>
+
+    <!--第一块-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip"
+        android:background="@android:color/white"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        >
+
+        <ImageView
+            android:id="@+id/iv_game_icon"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_marginLeft="5dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon1"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_game_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:text="王者荣耀"
+                android:textColor="#464646"
+                android:textSize="16sp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/tv_count_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="2dip"
+                    android:text="共2个礼包"
+                    android:textColor="#818181"
+                    android:textSize="11sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_game_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="2dip"
+                    android:maxLength="15"
+                    android:text="1个礼包可领取"
+                    android:textColor="#57818A"
+                    android:textSize="11sp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--第二块-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="5dip"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_game_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="【王者荣耀】新手礼包"
+                android:textColor="#464646"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_count_size1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginTop="2dip"
+                android:text="剩余：6921"
+                android:textColor="@color/user_text"
+                android:textSize="11sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_game_desc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginTop="2dip"
+                android:maxLength="15"
+                android:text="玫瑰花X5 酒X5 银两X3888"
+                android:textColor="#818181"
+                android:textSize="13sp"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dip"
+            >
+
+            <Button
+                android:id="@+id/btn_lingqu"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_down"
+                android:paddingBottom="8dip"
+                android:paddingLeft="14dip"
+                android:paddingRight="14dip"
+                android:paddingTop="8dip"
+                android:text="领取"
+                android:textColor="@color/download_text"
+                android:textSize="10dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <!--第三块模块-->
+
+    <!--第二块-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_game_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="【王者荣耀】新手礼包"
+                android:textColor="#464646"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_count_size2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginTop="2dip"
+                android:text="剩余：0"
+                android:textColor="#818181"
+                android:textSize="11sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_game_desc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginTop="2dip"
+                android:maxLength="20"
+                android:text="白水晶X5、黄金宝箱X2、银两X3888"
+                android:textColor="#818181"
+                android:textSize="13sp"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dip"
+            >
+            <TextView
+                android:id="@+id/tv_download2"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="8dip"
+                android:paddingLeft="14dip"
+                android:paddingRight="5dip"
+                android:paddingTop="8dip"
+                android:text="抢光了"
+                android:textColor="#818181"
+                android:textSize="10dp"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

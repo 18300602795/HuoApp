@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/vpBase"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/informationdetail_head"
+        />
+
+    <LinearLayout
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:orientation="vertical"
+        >
+
+    <TextView
+        android:id="@+id/tv_kefu1"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:text="玩家QQ群：524100078"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"/>
+        <TextView
+            android:id="@+id/tv_kefu2"
+            android:text="玩家QQ群：524100078"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"/>
+        <TextView
+            android:id="@+id/tv_kefu3"
+            android:text="玩家微信：HUOSDK"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"/>
+        <TextView
+            android:id="@+id/tv_kefu4"
+            android:text="客服时间：9:00~18:00（周一到周五）"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#A5A5A5"
+        android:text="Copyright:2016huosdk.com\n版本所有：广州火树网络科技有限公司"
+        android:textSize="16sp"
+        android:gravity="center"
+        />
+
+</LinearLayout>

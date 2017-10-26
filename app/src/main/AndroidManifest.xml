@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.huosuapp.text"
+    >
+    <!--com.huosuapp.text-->
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="25" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name="com.huosuapp.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.huosuapp.Ui.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 个人中心界面 -->
+
+        <!-- home界面 -->
+        <!--<activity android:name="com.huosuapp.Ui.MainActivity"-->
+        <!--android:launchMode="singleTask"-->
+        <!--android:screenOrientation="portrait"/>-->
+
+        <!-- 用户信息 -->
+        <activity
+            android:name="com.huosuapp.Ui.UndefinedActivity"
+            android:screenOrientation="portrait" />
+
+
+        <!-- 游戏详情界面 -->
+        <activity
+            android:name="com.huosuapp.Ui.GameDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!--开服表界面-->
+        <activity android:name="com.huosuapp.Ui.TableActivity" />
+
+
+        <!-- 下载管理-->
+        <activity
+            android:name="com.huosuapp.Ui.DownloadActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 时下热门界面 -->
+        <activity
+            android:name="com.huosuapp.Ui.HotActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 客服webView界面-->
+
+
+        <!-- 搜索界面 -->
+        <activity
+            android:name="com.huosuapp.Ui.SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+
+        <!-- 登录界面-->
+        <activity
+            android:name="com.huosuapp.Ui.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+
+        <!-- 注册界面-->
+        <activity
+            android:name="com.huosuapp.Ui.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+
+        <!-- 个人中心-->
+        <activity
+            android:name="com.huosuapp.Ui.UerContentActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 功能中心-->
+        <activity
+            android:name="com.huosuapp.Ui.HelpActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 找回密码-->
+        <activity
+            android:name="com.huosuapp.Ui.retrieveActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+
+
+        <!-- 图片放大-->
+        <activity
+            android:name="com.huosuapp.Ui.ImageDialogActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 设置界面-->
+        <activity
+            android:name="com.huosuapp.Ui.SettingActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 资讯详情界面-->
+        <activity
+            android:name="com.huosuapp.Ui.informationDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 充值界面-->
+        <activity
+            android:name="com.huosuapp.Ui.rechargeActivity"
+            android:screenOrientation="portrait" />
+
+
+        <!-- 分类详情界面-->
+        <activity
+            android:name="com.huosuapp.Ui.FenleiGameDetailsActivity"
+            android:screenOrientation="portrait" />
+
+
+        <!-- 礼包详情-->
+        <activity
+            android:name="com.huosuapp.Ui.giftActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 功能界面-->
+        <activity
+            android:name="com.huosuapp.Ui.Function"
+            android:screenOrientation="portrait" />
+
+
+        <!-- 客服界面-->
+        <activity
+            android:name="com.huosuapp.Ui.KefuActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 礼包详情1-->
+        <activity
+            android:name="com.huosuapp.Ui.GiftDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 礼包详情1-->
+        <activity
+            android:name="com.huosuapp.imagedemo.ImagePagerActivity"
+            android:screenOrientation="portrait" />
+
+        <!--下载的服务-->
+        <service android:name="com.huosuapp.download.DownloadService">
+            <intent-filter>
+                <action android:name="download.service.action" />
+            </intent-filter>
+        </service>
+
+
+        <!-- wap支付 -->
+
+
+        <activity
+            android:name="com.huosuapp.pay.ChargeActivityForWap"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+
+        <activity
+            android:name="com.huosuapp.pay.alipay.AlipayActivityForWap"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoDisplay" />
+
+        <!-- 微付通支付activity -->
+
+
+        <activity
+            android:name="com.switfpass.pay.activity.QQWapPayWebView"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name="com.huosuapp.pay.wftpay.WFTPayActivityForWap"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoDisplay" />
+
+
+        <receiver android:name="com.huosuapp.download.AppInstallReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.huosuapp.update.UpdateVersionService"></service>
+
+
+        <!--app信息参数-->
+        <meta-data
+            android:name="HS_APPID"
+            android:value="${HS_APPID}" />
+        <meta-data
+            android:name="HS_CLIENTID"
+            android:value="${HS_CLIENTID}" />
+        <meta-data
+            android:name="HS_APPKEY"
+            android:value="${HS_APPKEY}" />
+        <meta-data
+            android:name="HS_AGENT"
+            android:value="" />
+
+        <meta-data
+            android:name="com.huosuapp.Util.TableGlideModule"
+            android:value="GlideModule" />
+    </application>
+
+</manifest>

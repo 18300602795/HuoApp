@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/green"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlt_allreturn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white1"
+        android:padding="8dip"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/iv_nav"
+                android:layout_width="30dip"
+                android:layout_height="25dip"
+                android:layout_centerVertical="true"
+                android:background="@drawable/return_new_1"
+                />
+
+            <TextView
+                android:id="@+id/tv_nav1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_nav"
+                android:text="资讯详情"
+                android:textColor="#6c6c6c"
+                android:textSize="20sp"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.huosuapp.view.PowerWebView
+        android:id="@+id/help_webView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    <!--
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/green"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <com.example.view.PowerWebView
+                    android:id="@+id/lv_information_webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    />
+
+                <LinearLayout
+                    android:background="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="5dip"
+                    android:orientation="vertical"
+                    android:paddingBottom="8dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="8dip">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/money_btn2"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/iv_zan"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/dianzan1"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tv_one"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="+1"
+                                    android:visibility="gone"
+                                    />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_zan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:gravity="center"
+                                android:text="628"
+                                android:textColor="@color/text_tile"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/llt_pinglun"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/money_btn2"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_pinglun"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:gravity="center"
+                                android:text="评论"
+                                android:textColor="@color/text_tile"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.example.view.MyListView
+                        android:id="@+id/lv_comments"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:listSelector="@color/transparent"
+                        android:scrollbars="none"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    -->
+
+</LinearLayout>

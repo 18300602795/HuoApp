@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:id="@+id/main_head_layout"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:gravity="center"
+            android:padding="10dip" >
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/app_icon"
+                android:scaleType="center"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_toLeftOf="@+id/iv_setting"
+                android:layout_toRightOf="@id/iv_logo"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:background="@drawable/read_kuang"
+                    android:hint="剑侠情缘"
+                    android:paddingLeft="3dip"
+                    android:paddingRight="50dip"
+                    android:singleLine="true"
+                    android:textColor="#aaaaaa"
+                    android:textSize="14sp"
+                    android:textColorHint="#aaaaaa" />
+
+                <ImageView 
+                    android:id="@+id/iv_search"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"      
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/dangdajing1" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/download" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37dp"
+            android:layout_marginRight="37dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="推荐"
+                android:textColor="@color/text_tile"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_online"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="游戏"
+                android:textColor="@color/text_tile"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_stand"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="分类"
+                android:textColor="@color/text_tile"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_gift"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="礼包"
+                android:textColor="@color/text_tile"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_information"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="资讯"
+                android:textColor="@color/text_tile"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- 第二块Viewpager -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_below="@+id/main_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/vpBase" />
+
+    <ImageView
+        android:id="@+id/main_splash"
+        android:layout_width="match_parent"
+        android:background="@drawable/app_splash"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

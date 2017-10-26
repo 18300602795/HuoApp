@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingTop="10dp" >
+
+    <ImageView
+        android:id="@+id/iv_game_con"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/icon1" />
+
+    <TextView
+        android:id="@+id/tv_game_name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="小兵传奇"
+        android:textColor="#464646"
+        android:textSize="16dp" />
+
+   <!-- <TextView
+        android:id="@+id/tv_game_desc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="动作枪战"
+        android:textColor="#818181"
+        android:textSize="12dp" />-->
+
+    <Button
+        android:id="@+id/tv_download"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/btn_down"
+        android:paddingBottom="8dip"
+        android:paddingLeft="14dip"
+        android:paddingRight="14dip"
+        android:paddingTop="8dip"
+        android:text="下载"
+        android:textColor="@color/download_text"
+        android:textSize="10dp" />
+
+</LinearLayout>

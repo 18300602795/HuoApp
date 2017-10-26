@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/ttw_mygamelist_normal"
+              android:orientation="horizontal"
+              android:padding="10dp">
+
+
+    <ImageView
+        android:id="@+id/iv_game_icon"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ic_launcher"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_game_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#282727"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_gift_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:textSize="12sp"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:id="@+id/gift_list_progress"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="7dp"
+                />
+            <TextView
+                android:id="@+id/gift_list_progress_text"
+                android:layout_width="wrap_content"
+                android:textSize="11sp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/gift_list_take"
+        android:layout_width="45dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/gift_list_but"
+        android:text="领取"
+        android:textColor="#ffffff"/>
+
+</LinearLayout>

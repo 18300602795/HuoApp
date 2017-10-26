@@ -1,0 +1,37 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+ext {
+    // Sdk and tools
+    minSdkVersion = 15
+    targetSdkVersion = 25
+    compileSdkVersion = 25
+    buildToolsVersion = '25.0.2'
+    // App dependencies
+    supportLibraryVersion = '24.2.1'
+    butterknife = '8.4.0'
+    nineoldandroids = '2.4.0'
+    ucrop='1.5.0'
+    umengAnalytics = 'latest.integration'
+    flycoTabLayout_Lib = '2.0.2@aar'
+    photoView = '1.2.4'
+    eventbus = '3.0.0'
+    glide = '3.7.0'
+    okHttp='3.8.1'
+    fastjson = '1.1.46.android'
+    leakcanary = '1.4-beta2'
+    recyclerviewAnimators = '2.2.3'
+}
+

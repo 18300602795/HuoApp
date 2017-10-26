@@ -1,0 +1,25 @@
+// 多渠道/多环境 的不同配置
+//通过apply from '路径在别的gradle中引入，会替换对应的配置'
+//
+android {
+    productFlavors {
+       
+        "82_shouyouchun" {
+            applicationId "com.shouyouchun.huosuapp"
+            versionCode 294
+            versionName "1.3.1"
+            // 动态添加 string.xml 字段；
+            // 注意，这里是添加，在 string.xml 不能有这个字段，会重名！！！
+            resValue "string", "app_name", " 手游村"
+            // 动态修改 常量 字段
+            buildConfigField("boolean","useMessage","true")
+            buildConfigField("String","BASE_URL",'"http://www.shouyoucun.cn"')
+            buildConfigField ("String", "DEFAULT_PARTNER",'"2088512857502955"')
+            buildConfigField ("String", "DEFAULT_SELLER",'"yulangen@163.com"')
+            buildConfigField ("String", "PRIVATE",'"MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAJVKXNeSIZZwftadNILX6henNWO6tbmuwuqvZGeEFrq0/igO2w4hCTFxZxwVuU1YBG3WBZCgJC4uB9xNkI5GWZq+99xft7Z8DBR1kvQWHazAutI4APaZWr9o7lR431Potc4mcPqlJjOpQ78Y84v04T/pjddImnavtO0oQCHS9FQ1AgMBAAECgYEAjSdTYyuzADf7ZVYcST53AshBLbtiiV8Ywqb1Kv70MrJgwGVTbyeDNrF/iUls/BkljuhWOKmBq/wvyHe6HxubKcebula1vXyM2F/XXsZBz7xijTZby7Ng9ynhyIiRk6DMQyLYeuBYCzqIwOBgC/ZdPgFlpjvWtCQkIsce4E5860ECQQDR0/eoPbVea5DGpZ2MNC6ao5aeOcC6ZjvQKuPVZw8/QiCB4Huu3GymbjLbVDDjxi5dTGajTa4uT+mbQmlNckNlAkEAtiQx+sv9j8I7E2xw6Sd1iciU4T4S3Gt7kwI37yKh6d1K8r5r3Q3cqlDNHn9B/Nx39ScDYalXp1tGzd4KKw0IkQJBALjrQr59q8KLr6qxuFgggNX9x7aoFSbxBFOgCOxAiFpqj7WGPdpMHmDKi31qBDAoryHAPFA9HH1qJemTrLP5OFUCQEANdIIVEKNok6vd+8sSdFQy9KBNWwamybtGEXOIQ1Zh2wSIkJgZUtuWNLwf1o3c3laZFKhYjBmvkLO+/OZs2/ECQHZiXNNNxK7MQzTinv/RH5FXnYJ0S6s0tVh30aTODzgorqkmdF6p5UHHlLuD2UjOMPfjbzfL18nsyS0tcKWKvhk="')
+            // 修改 AndroidManifest.xml 里渠道变量
+            manifestPlaceholders = [HS_APPID: "100",HS_CLIENTID:"49",HS_APPKEY:"62da94cb04d85549024f698e2022a736"]
+        }
+      
+    }
+}

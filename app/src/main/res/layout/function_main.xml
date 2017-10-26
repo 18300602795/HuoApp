@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/vpBase"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llt_gongnengjieshao"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <include
+            layout="@layout/userconter_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <!-- 第2大块内容 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_function"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="玩家可以在app中实时了解一手的游戏资讯和最贴心的服务 比如充值、联系客服和密码修改，让您一手之间即可完成这些操作。我们会紧贴用户和市场的需求适时迭代功能，您的支持是我们前进的动力！
+
+            "
+                android:textSize="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/aboutmy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <LinearLayout
+        android:id="@+id/llt_l22"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@drawable/register_banner"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/iv_login_return"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/register_return"
+            />
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/tv_about_my"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#A5A5A5"
+        android:text="Copyright:2016huosdk.com\n版本所有：广州火树网络科技有限公司"
+        android:textSize="16sp"
+        android:gravity="center"
+        />
+
+    </LinearLayout>
+</LinearLayout>
