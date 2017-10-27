@@ -257,6 +257,9 @@ public class TableListAdapter extends BaseAdapter {
             }
             if(downLoadSucceed.getData()!=null){
                 EventBus.getDefault().post(new DownCountChange(gameID,downLoadSucceed.getData().getDowncnt()));
+            }else {
+                Global.showToast(downLoadSucceed.getMsg(), 0);
+                return;
             }
             final DownloadInfo downloadInfo = DownloadService.getDownloadManager(activity).getDownloadInfoByAppId(mBeanList.get(position).gamedata.id + "");
             if (downloadInfo == null) {
