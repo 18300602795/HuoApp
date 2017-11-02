@@ -49,7 +49,7 @@ public class MyApplication extends Application {
 	public static String apkdownload_path="";
 	public static int time = 0;
 	public static boolean isCache = true;
-	public static String uid = "438";
+	public static String uid = "443";
 	public static boolean isPinglunLogin;//  为true代表是从评论那里跳到登录的
     @Override
 	public void onCreate() {

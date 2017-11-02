@@ -57,6 +57,7 @@ public class informationfragment extends Basefragment {
 		View head = View.inflate(context,R.layout.information_listview_head,null);
 		listview.addHeaderView(head);
 		stateLayout.showContentView();
+		listview.setAutoLoadEnable(true);
 		textInformationListadapter=new InformationListadapter(datas,this);
 		listview.setAdapter(textInformationListadapter);
 		listview.mFooterView.setState(XFooterView.STATE_LOADING);
@@ -96,6 +97,7 @@ public class informationfragment extends Basefragment {
 
 			@Override
 			public void onLoadMore() {
+				Logger.msg("开始加载更多","");
 				getData(currentPage+1);
 			}
 		});
@@ -168,11 +170,11 @@ public class informationfragment extends Basefragment {
 				datas.addAll(databean.getNews_list());
 				textInformationListadapter.notifyDataSetChanged();
 				currentPage=requestPage;
-				if (databean.getNews_list().size() < 15){
-					Logger.msg("","没有更多数据");
-					listview.mFooterView.setState(XFooterView.STATE_NORMAL);
-					listview.mFooterView.mHintView.setText("没有更多数据");
-				}
+//				if (databean.getNews_list().size() < 10){
+//					Logger.msg("","没有更多数据");
+//					listview.mFooterView.setState(XFooterView.STATE_NORMAL);
+//					listview.mFooterView.mHintView.setText("没有更多数据");
+//				}
 			}else {
 				Logger.msg("","没有更多数据");
 				listview.mFooterView.mHintView.setText("没有更多数据");

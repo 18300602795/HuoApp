@@ -206,8 +206,7 @@ public class Homefragment1 extends Basefragment implements
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             int currentItem = mvViewPager.getCurrentItem();
-            mvViewPager.setCurrentItem((currentItem + 1) % mDots.size());
-            abc.sendEmptyMessageDelayed(0, 4500);
+            mvViewPager.setCurrentItem(currentItem + 1);
         }
     };
 
@@ -218,11 +217,12 @@ public class Homefragment1 extends Basefragment implements
         if (mvViewPageradapter == null) {
             mvViewPageradapter = new mvViewPagerAdapter();
             mvViewPager.setAdapter(mvViewPageradapter);
+            mvViewPager.setCurrentItem( 10000  * listbean.size());
         } else {
             mvViewPageradapter.notifyDataSetChanged();
         }
         // 实现轮播效果
-        abc.sendEmptyMessageDelayed(0, 4500);
+        abc.sendEmptyMessageDelayed(0, 4000);
     }
 
     /**
@@ -270,8 +270,8 @@ public class Homefragment1 extends Basefragment implements
             public void onPageSelected(int position) {
                 int count = mDots.size();
                 for (int i = 0; i < count; i++) {
-                    if (position == i) {
-                        mDots.get(position).setBackgroundResource(
+                    if (position % listbean.size() == i) {
+                        mDots.get(i).setBackgroundResource(
                                 R.drawable.dot_focus);
                     } else {
                         mDots.get(i).setBackgroundResource(
@@ -282,7 +282,8 @@ public class Homefragment1 extends Basefragment implements
 
             @Override
             public void onPageScrollStateChanged(int state) {
-
+                abc.removeCallbacksAndMessages(null);
+                abc.sendEmptyMessageDelayed(0, 4000);
             }
         });
 
@@ -486,7 +487,7 @@ public class Homefragment1 extends Basefragment implements
 
         @Override
         public int getCount() {
-            return listbean == null ? 0 : listbean.size();
+            return listbean == null ? 0 : Integer.MAX_VALUE;
         }
 
         @Override
@@ -507,7 +508,7 @@ public class Homefragment1 extends Basefragment implements
                     -1, -1);
             img.setLayoutParams(layoutParams);
             img.setScaleType(ImageView.ScaleType.FIT_XY);
-            final LunboImgViewBean.DataBean.ListBean listBean = listbean.get(position);
+            final LunboImgViewBean.DataBean.ListBean listBean = listbean.get(position % listbean.size());
             if (listBean.getImage() == null) {
                 ImageCache.scaleLoad(img, R.drawable.banner,
                         container.getContext());

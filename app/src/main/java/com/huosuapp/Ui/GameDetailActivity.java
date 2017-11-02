@@ -172,7 +172,7 @@ public class GameDetailActivity extends BaseActivity2 {
         params.put("page", page);
         params.put("offset", pageSize + "");
         String url = StringUtils.getCompUrlFromParams(getCommentURL, params);
-        OkHttpUtils.getString(url, MyApplication.isCache, new Callback() {
+        OkHttpUtils.getString(url, false, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
 
@@ -535,6 +535,7 @@ public class GameDetailActivity extends BaseActivity2 {
     private DownLoadSucceed downLoadSucceed;
 
     private void Download(String res, int gameid) {
+        Logger.msg("获取的下载内容的长度","" + res.length());
         if (res.length() > 28 && res.length() < 40) {
             downLoadErrorBean = JsonUtil.getJsonUtil().json2Bean(res, DownLoadErrorBean.class);
             if (downLoadErrorBean == null) {

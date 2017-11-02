@@ -279,6 +279,9 @@ public class FenleiList_adapter extends BaseAdapter {
 			}
 			if(downLoadSucceed.getData()!=null){
 				EventBus.getDefault().post(new DownCountChange(gameID,downLoadSucceed.getData().getDowncnt()));
+			}else {
+				Global.showToast(downLoadSucceed.getMsg(), 0);
+				return;
 			}
 			final DownloadInfo downloadInfo = DownloadService.getDownloadManager(context).getDownloadInfoByAppId(game_list.get(position).getGameid() + "");
 			if (downloadInfo == null) {
