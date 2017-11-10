@@ -453,6 +453,8 @@ public class Homefragment1 extends Basefragment implements
                 mHomeListBean = homeList.getData();
                 if (mHomeListBean != null) {
                     handler.sendEmptyMessage(GAME_MORE);
+                }else {
+                    handler.sendEmptyMessage(GAME_NO_MORE);
                 }
             }
         }else {

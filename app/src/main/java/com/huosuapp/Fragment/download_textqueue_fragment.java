@@ -311,7 +311,12 @@ public class download_textqueue_fragment extends Basefragment {
                     downloadInfo.isDownloadComplete = true;
                     tv_download.setText("安装");//执行安装
                     EventBus.getDefault().post(new DownStateChange(Integer.parseInt(downloadInfo.getAppId())));
-                    ApkUtils.install(downloadInfo);
+                    if (downloadInfo != null) {
+                        if (!ApkUtils.install(downloadInfo)) {
+                            deleteInfo(downloadInfo);
+                            tv_download.setText("暂停");
+                        }
+                    }
 //                    Intent intent_install = new Intent();
 //                    intent_install.setAction(Intent.ACTION_VIEW);
 //                    File file = new File(MyApplication.apkdownload_path + downloadInfo.getTitle() + ".apk");
@@ -403,7 +408,12 @@ public class download_textqueue_fragment extends Basefragment {
 //                            //Logger.msg(TAG, "下载完成后的路径：" + file.getPath());
 //                            intent_install.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
 //                            startActivity(intent_install);
-                            ApkUtils.install(downloadInfo);
+                            if (downloadInfo != null) {
+                                if (!ApkUtils.install(downloadInfo)) {
+                                    deleteInfo(downloadInfo);
+                                    ((TextView) v).setText("暂停");
+                                }
+                            }
                             break;
                         default:
                             break;
@@ -427,6 +437,17 @@ public class download_textqueue_fragment extends Basefragment {
         }
     }
 
+    private void deleteInfo(DownloadInfo downloadInfo) {
+        SharePrefUtil.saveBoolean(Global.getContext(),SharePrefUtil.KEY.ISDELETE,false);
+        try {
+            ApkUtils.deleteDownloadApk(ctx, downloadInfo.getFileName());//delete file apk from sdcard!
+            downloadManager.removeDownload(downloadInfo);
+            unInstallList.remove(downloadInfo);
+            mydownload_adapter.notifyDataSetChanged();
+        } catch (DbException e) {
+            LogUtils.e(e.getMessage(), e);
+        }
+    }
     private class DownloadRequestCallBack extends RequestCallBack<File> {
 
         @SuppressWarnings("unchecked")

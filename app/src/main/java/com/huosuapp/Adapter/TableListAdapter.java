@@ -26,6 +26,7 @@ import com.huosuapp.Util.Global;
 import com.huosuapp.Util.JsonUtil;
 import com.huosuapp.Util.Logger;
 import com.huosuapp.Util.OkHttpUtils;
+import com.huosuapp.Util.SharePrefUtil;
 import com.huosuapp.Util.StringUtils;
 import com.huosuapp.download.DownloadInfo;
 import com.huosuapp.download.DownloadService;
@@ -313,11 +314,26 @@ public class TableListAdapter extends BaseAdapter {
                     }
                     break;
                 case SUCCESS:
-                    ApkUtils.install(downloadInfo);
+                    if (downloadInfo != null) {
+                        if (!ApkUtils.install(downloadInfo)) {
+                            deleteInfo(downloadInfo);
+                            Download(res, v, gameID, position);
+                        }
+                    }
                     break;
                 default:
                     break;
             }
+        }
+    }
+
+    private void deleteInfo(DownloadInfo downloadInfo) {
+        SharePrefUtil.saveBoolean(Global.getContext(), SharePrefUtil.KEY.ISDELETE, false);
+        try {
+            ApkUtils.deleteDownloadApk(activity, downloadInfo.getFileName());//delete file apk from sdcard!
+            DownloadService.getDownloadManager(activity).removeDownload(downloadInfo);
+        } catch (DbException e) {
+            LogUtils.e(e.getMessage(), e);
         }
     }
 

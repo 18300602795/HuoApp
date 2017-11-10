@@ -16,6 +16,7 @@ import com.huosuapp.Util.Constants;
 import com.huosuapp.Util.Global;
 import com.huosuapp.Util.JsonUtil;
 import com.huosuapp.Util.Logger;
+import com.huosuapp.Util.SharePrefUtil;
 import com.huosuapp.Util.StringUtils;
 import com.huosuapp.download.DownloadInfo;
 import com.huosuapp.download.DownloadManager;
@@ -36,6 +37,8 @@ import org.greenrobot.eventbus.ThreadMode;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+
+import static com.alipay.sdk.app.statistic.c.v;
 
 /**
  *下载的按钮
@@ -320,10 +323,23 @@ public class DownStateButton extends Button {
                 }
                 break;
             case SUCCESS:
-                ApkUtils.install(downloadInfo);
+                if (downloadInfo != null) {
+                    if (!ApkUtils.install(downloadInfo)) {
+                        deleteInfo(downloadInfo);
+                    }
+                }
                 break;
             default:
                 break;
+        }
+    }
+    private void deleteInfo(DownloadInfo downloadInfo) {
+        SharePrefUtil.saveBoolean(Global.getContext(), SharePrefUtil.KEY.ISDELETE, false);
+        try {
+            ApkUtils.deleteDownloadApk(mContext, downloadInfo.getFileName());//delete file apk from sdcard!
+            DownloadService.getDownloadManager(mContext).removeDownload(downloadInfo);
+        } catch (DbException e) {
+            LogUtils.e(e.getMessage(), e);
         }
     }
 }

@@ -60,10 +60,10 @@
             android:background="@drawable/table_btn_bg"
             android:text="历史开服" />
     </LinearLayout>
+
     <FrameLayout
         android:id="@+id/content_fl"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </FrameLayout>
+        android:layout_height="match_parent"></FrameLayout>
 
 </LinearLayout>

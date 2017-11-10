@@ -83,7 +83,7 @@ public class GameDetailActivity extends BaseActivity2 {
     private com.huosuapp.download.DownloadManager downloadManager;
     private String ATG = "获取出来的数据";
 
-    private LinearLayout  llt_gift_details;//游戏评论，礼包详情
+    private LinearLayout llt_gift_details;//游戏评论，礼包详情
 
     private CommentAdapter commentAdapter; //评论设配器
     private RelativeLayout rlt_allturn;
@@ -114,15 +114,15 @@ public class GameDetailActivity extends BaseActivity2 {
 
                 expandableTextView.setText(dataBean.getDisc());
                 if (dataBean.getIcon() != null && dataBean.getIcon() != "") {
-                    if (Global.drawable == null){
+                    if (Global.drawable == null) {
                         ImgUtil.getBitmapUtils(GameDetailActivity.this).display(iv_game_icon, dataBean.getIcon() + "");
-                        ImgUtil.loadImage(dataBean.getIcon() + "",iv_game_icon);
+                        ImgUtil.loadImage(dataBean.getIcon() + "", iv_game_icon);
                     }
                 }
                 tv_download.setText(dataBean.getSize() == "" ? "" : "下载(" + dataBean.getSize() + ")");
                 imageAdapter = new ImageAdapter();
 
-                mRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
+                mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
                 mRecyclerView.setAdapter(imageAdapter);
                 break;
         }
@@ -137,7 +137,7 @@ public class GameDetailActivity extends BaseActivity2 {
         pb_downloadl = (ProgressBar) findViewById(R.id.pb_download);
         rlt_allturn = (RelativeLayout) findViewById(R.id.ic_top);
         tv_download = (TextView) findViewById(R.id.tv_download_tip);
-        mRecyclerView= (RecyclerView) findViewById(R.id.game_detail_pic);
+        mRecyclerView = (RecyclerView) findViewById(R.id.game_detail_pic);
         expandableTextView = (ExpandableTextView) findViewById(R.id.expand_text_view);
 
         //初始化点赞动画
@@ -316,7 +316,7 @@ public class GameDetailActivity extends BaseActivity2 {
         tv_version = (TextView) findViewById(R.id.tv_versions);
         tv_language = (TextView) findViewById(R.id.tv_language);
         iv_game_icon = (ImageView) findViewById(R.id.iv_game_icon);
-        if (Global.drawable!=null){
+        if (Global.drawable != null) {
             iv_game_icon.setImageDrawable(Global.drawable);
         }
         if (mDialog == null) {
@@ -437,7 +437,7 @@ public class GameDetailActivity extends BaseActivity2 {
 
     @Override
     public int getViewID() {
-    return  R.layout.ttv_game_detail;
+        return R.layout.ttv_game_detail;
     }
 
 
@@ -503,7 +503,7 @@ public class GameDetailActivity extends BaseActivity2 {
         map.put("network", "WIFI");
         map.put("userua", "");
         String url = StringUtils.getCompUrlFromParams(Constants.GAME_DOWN, map);
-        Logger.msg("下载的详细详细",url);
+        Logger.msg("下载的详细详细", url);
         OkHttpUtils.getString(url, MyApplication.isCache, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
@@ -535,7 +535,7 @@ public class GameDetailActivity extends BaseActivity2 {
     private DownLoadSucceed downLoadSucceed;
 
     private void Download(String res, int gameid) {
-        Logger.msg("获取的下载内容的长度","" + res.length());
+        Logger.msg("获取的下载内容的长度", "" + res.length());
         if (res.length() > 28 && res.length() < 40) {
             downLoadErrorBean = JsonUtil.getJsonUtil().json2Bean(res, DownLoadErrorBean.class);
             if (downLoadErrorBean == null) {
@@ -563,7 +563,6 @@ public class GameDetailActivity extends BaseActivity2 {
     }
 
 
-
     /**
      * 本页的点击事件
      */
@@ -574,7 +573,7 @@ public class GameDetailActivity extends BaseActivity2 {
 
                 if (Build.VERSION.SDK_INT > 20) {
                     finishAfterTransition();
-                }else {
+                } else {
                     finish();
                 }
                 overridePendingTransition(R.anim.act_back_out_in, R.anim.act_back_in_out);
@@ -627,13 +626,30 @@ public class GameDetailActivity extends BaseActivity2 {
                 }
                 break;
             case SUCCESS:
-                ApkUtils.install(downloadInfo);
+                Logger.msg("开始安装", "");
+                if (downloadInfo != null) {
+                    if (!ApkUtils.install(downloadInfo)) {
+                        deleteInfo(downloadInfo);
+                    }
+                }
+
                 break;
             default:
                 break;
         }
 
     }
+
+    private void deleteInfo(DownloadInfo downloadInfo) {
+        SharePrefUtil.saveBoolean(Global.getContext(), SharePrefUtil.KEY.ISDELETE, false);
+        try {
+            ApkUtils.deleteDownloadApk(this, downloadInfo.getFileName());//delete file apk from sdcard!
+            downloadManager.removeDownload(downloadInfo);
+        } catch (DbException e) {
+            LogUtils.e(e.getMessage(), e);
+        }
+    }
+
 
     private void addNewDownload() {
         try {
@@ -824,10 +840,10 @@ public class GameDetailActivity extends BaseActivity2 {
         @Override
         public ImageHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             ImageView imageView = new ImageView(GameDetailActivity.this);
-                //设置布局图片以105*150显示 （简单解释——设置数字不一样，图片的显示大小不一样）
-            RecyclerView.LayoutParams  params= new RecyclerView.LayoutParams(Global.dp2px
+            //设置布局图片以105*150显示 （简单解释——设置数字不一样，图片的显示大小不一样）
+            RecyclerView.LayoutParams params = new RecyclerView.LayoutParams(Global.dp2px
                     (150, GameDetailActivity.this), Global.dp2px(230, GameDetailActivity.this));
-            params.rightMargin=Global.dp2px(10, GameDetailActivity.this);
+            params.rightMargin = Global.dp2px(10, GameDetailActivity.this);
             imageView.setLayoutParams(params);
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
             return new ImageHolder(imageView);
@@ -842,14 +858,14 @@ public class GameDetailActivity extends BaseActivity2 {
                     crossFade(1000).//淡入淡出,注意:如果设置了这个,则必须要去掉asBitmap
                     placeholder(R.drawable.icon_vertical).thumbnail(0.1f).
                     into(new GlideDrawableImageViewTarget(holder.mImageView) {
-                @Override
-                public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> animation) {
-                    super.onResourceReady(resource, animation);
+                        @Override
+                        public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> animation) {
+                            super.onResourceReady(resource, animation);
 //                    if (mDialog.isShowing()){
 //                        mDialog.dismiss();
 //                    }
-                }
-            });
+                        }
+                    });
             holder.mImageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -865,15 +881,16 @@ public class GameDetailActivity extends BaseActivity2 {
 
         @Override
         public int getItemCount() {
-            return gameDetail.getData().getImage() == null ?3:gameDetail.getData().getImage().size();
+            return gameDetail.getData().getImage() == null ? 3 : gameDetail.getData().getImage().size();
         }
     }
 
-    class ImageHolder extends RecyclerView.ViewHolder{
+    class ImageHolder extends RecyclerView.ViewHolder {
         ImageView mImageView;
+
         public ImageHolder(View itemView) {
             super(itemView);
-            mImageView= (ImageView) itemView;
+            mImageView = (ImageView) itemView;
         }
     }
 
@@ -892,7 +909,7 @@ public class GameDetailActivity extends BaseActivity2 {
 
     @Override
     protected void onDestroy() {
-        Global.drawable=null;
+        Global.drawable = null;
         EventBus.getDefault().post(new DownStateChange(gameID));
         super.onDestroy();
 

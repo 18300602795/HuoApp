@@ -8,12 +8,15 @@ package com.huosuapp.update;
 import android.app.DownloadManager;
 import android.app.Service;
 import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.IBinder;
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
@@ -100,19 +103,43 @@ public class UpdateVersionService extends Service {
                 //停止服务并关闭广播
                 UpdateVersionService.this.stopSelf();
                 //自动安装apk
-                installAPK(context,manager.getUriForDownloadedFile(downId));
+                Logger.msg("安装路径：", getRealFilePath(context, manager.getUriForDownloadedFile(downId)));
+                installAPK(context,getRealFilePath(context, manager.getUriForDownloadedFile(downId)));
 
             }
+        }
+
+        private String getRealFilePath(final Context context, final Uri uri) {
+            if (null == uri) return null;
+            final String scheme = uri.getScheme();
+            String data = null;
+            if (scheme == null)
+                data = uri.getPath();
+            else if (ContentResolver.SCHEME_FILE.equals(scheme)) {
+                data = uri.getPath();
+            } else if (ContentResolver.SCHEME_CONTENT.equals(scheme)) {
+                Cursor cursor = context.getContentResolver().query(uri, new String[]{MediaStore.Images.ImageColumns.DATA}, null, null, null);
+                if (null != cursor) {
+                    if (cursor.moveToFirst()) {
+                        int index = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+                        if (index > -1) {
+                            data = cursor.getString(index);
+                        }
+                    }
+                    cursor.close();
+                }
+            }
+            return data;
         }
         /**
          * 安装apk文件
          */
-        private void installAPK(Context context,Uri apk) {
+        private void installAPK(Context context,String apk) {
             if(apk!=null){
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);//动作
                 intent.addCategory(Intent.CATEGORY_DEFAULT);//类型
-                intent.setDataAndType(apk, "application/vnd.android.package-archive");
+                intent.setDataAndType(Uri.parse("file://" + apk), "application/vnd.android.package-archive");
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }

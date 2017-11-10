@@ -17,9 +17,9 @@ import java.util.ArrayList;
 
 
 public abstract class Basefragment extends Fragment {
-	protected Activity context;
 	protected StateLayout stateLayout;
 	private Basefragment basefragment;
+    public Activity context;
 
 	/** 是否已被加载过一次，第二次就不再去请求数据了 */
 	protected boolean mHasLoadedOnce=false;
@@ -64,8 +64,8 @@ public abstract class Basefragment extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		stateLayout = new MyStateLayout(getActivity());
 		context = getActivity();
-		stateLayout = new MyStateLayout(context);
 		initView();
 		initData();
 		initListener();
@@ -173,7 +173,7 @@ public abstract class Basefragment extends Fragment {
 	/** 不会一直重复重复重复重复的提醒了 */
 	protected void showToast(String msg, int length) {
 		if (toast == null) {
-			toast = Toast.makeText(context, msg, length);
+			toast = Toast.makeText(getActivity(), msg, length);
 		} else {
 			toast.setText(msg);
 		}

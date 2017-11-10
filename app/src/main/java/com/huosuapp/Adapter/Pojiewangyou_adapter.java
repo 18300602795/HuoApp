@@ -28,6 +28,7 @@ import com.huosuapp.Util.ImgUtil;
 import com.huosuapp.Util.JsonUtil;
 import com.huosuapp.Util.Logger;
 import com.huosuapp.Util.OkHttpUtils;
+import com.huosuapp.Util.SharePrefUtil;
 import com.huosuapp.Util.StringUtils;
 import com.huosuapp.Util.getTypeUtils;
 import com.huosuapp.download.DownloadInfo;
@@ -320,7 +321,12 @@ public class Pojiewangyou_adapter extends BaseAdapter {
                     }
                     break;
                 case SUCCESS:
-                    ApkUtils.install(downloadInfo);
+                    if (downloadInfo != null) {
+                        if (!ApkUtils.install(downloadInfo)) {
+                            deleteInfo(downloadInfo);
+                            Download(res, v, gameID, position);
+                        }
+                    }
                     break;
                 default:
                     break;
@@ -331,6 +337,16 @@ public class Pojiewangyou_adapter extends BaseAdapter {
             }
         }
     }
+    private void deleteInfo(DownloadInfo downloadInfo) {
+        SharePrefUtil.saveBoolean(Global.getContext(), SharePrefUtil.KEY.ISDELETE, false);
+        try {
+            ApkUtils.deleteDownloadApk(context, downloadInfo.getFileName());//delete file apk from sdcard!
+            DownloadService.getDownloadManager(context).removeDownload(downloadInfo);
+        } catch (DbException e) {
+            LogUtils.e(e.getMessage(), e);
+        }
+    }
+
 
     private void addNewDownload(final int position, final DownloadInfo downloadInfo, final Button btn) {
         Logger.msg("新添加了下载任务", "132");
